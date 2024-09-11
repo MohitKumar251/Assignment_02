@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDB search with periodic table</title>
+    <style>
+    table{
+        background: #000;
+        color: #fff;
+    }
+    tr td{
+        cursor: pointer;
+    }
+    </style>
+</head>
+<body>
+    <center>
+    <h1>Protein Data Bank entries by elements</h1>
+    <table border="0" cellspacing="0" cellpadding="11" id="periodic">
+        <tbody>
+            <tr id="R1">
+                <td id="H" title="Hydrogen">1<br>H</td>
+                <td id="D" title="Deuterium">1<br>D</td>
+                <td colspan="14" class="empty"></td>
+                <td id="X" title="?">?<br>X</td>
+                <td id="He" title="helium">2<br>He</td>
+            </tr>
+            <tr id="R2">
+                <td id="Li" title="Lithium">3<br>Li</td>
+                <td id="Be" title="Beryllium">4<br>Be</td>
+                <td class="empty" colspan="10" rowspan="2"></td>
+                <td id="B" title="Boron">5<br>B</td>
+                <td id="C" title="Carbon">6<br>C</td>
+                <td id="N" title="Nitrogen">7<br>N</td>
+                <td id="O" title="Oxygen">8<br>O</td>
+                <td id="F" title="Fluorine">9<br>F</td>
+                <td id="Ne" title="Neon">10<br>Ne</td>
+            </tr>
+            <tr id="R3">
+                <td id="Na" title="Sodium">11<br>Na</td>
+                <td id="Mg" title="Magnesium">12<br>Mg</td>
+                <td id="Al" title="Aluminium">13<br>Al</td>
+                <td id="Si" title="Silicon">14<br>Si</td>
+                <td id="P" title="Phosphorus">15<br>P</td>
+                <td id="S" title="Sulfur">16<br>S</td>
+                <td id="Cl" title="Chlorine">17<br>Cl</td>
+                <td id="Ar" title="Argon">18<br>Ar</td>
+            </tr>
+            <tr id="R4">
+                <td id="K" title="Potassium">19<br>K</td>
+                <td id="Ca" title="Calcium">20<br>Ca</td>
+                <td id="Sc" title="Scandium">21<br>Sc</td>
+                <td id="Ti" title="Titanium">22<br>Ti</td>
+                <td id="V" title="Vanadium">23<br>V</td>
+                <td id="Cr" title="Chromium">24<br>Cr</td>
+                <td id="Mn" title="Manganese">25<br>Mn</td>
+                <td id="Fe" title="Iron">26<br>Fe</td>
+                <td id="Co" title="Cobalt">27<br>Co</td>
+                <td id="Ni" title="Nickle">28<br>Ni</td>
+                <td id="CU" title="Copper">29<br>Cu</td>
+                <td id="Zn" title="Zinc">30<br>Zn</td>
+                <td id="Ga" title="Gallium">31<br>Ga</td>
+                <td id="Ge" title="Germanium">32<br>Ge</td>
+                <td id="As" title="Arsenic">33<br>As</td>
+                <td id="Se" title="Selenium">34<br>Se</td>
+                <td id="Br" title="Bromine">35<br>Br</td>
+                <td id="Kr" title="Krypton">36<br>Kr</td>
+            </tr>
+            <tr id="R5">
+                <td id="Rb" title="Rubidium">37<br>Rb</td>
+                <td id="Sr" title="Strontium">38<br>Sr</td>
+                <td id="Y" title="Yttrium">39<br>Y</td>
+                <td id="Zr" title="Zirconium">40<br>Zr</td>
+                <td id="Nb" title="Niobium">41<br>Nb</td>
+                <td id="Mo" title="Molybdenum">42<br>Mo</td>
+                <td id="Tc" title="Technetium">43<br>Tc</td>
+                <td id="Ru" title="Ruthenium">44<br>Ru</td>
+                <td id="Rh" title="Rhodium">45<br>Rh</td>
+                <td id="Pd" title="Palladium">46<br>Pd</td>
+                <td id="Ag" title="Silver">47<br>Ag</td>
+                <td id="Cd" title="Cadmium">48<br>Cd</td>
+                <td id="In" title="Indium">49<br>In</td>
+                <td id="Sn" title="Tin">50<br>Sn</td>
+                <td id="Sb" title="Antimony">51<br>Sb</td>
+                <td id="Te" title="Tellurium">52<br>Te</td>
+                <td id="I" title="Iodine">53<br>I</td>
+                <td id="Xe" title="Xenon">54<br>Xe</td>
+            </tr>
+            <tr id="R6">
+                <td id="Cs" title="Caesium">55<br>Cs</td>
+                <td id="Ba" title="Barium">56<br>Ba</td>
+                <td class="empty"><br></td>
+                <td id="Hf" title="Hafnium">72<br>Hf</td>
+                <td id="Ta" title="Tantalum">73<br>Ta</td>
+                <td id="W" title="Tungsten">74<br>W</td>
+                <td id="Re" title="Rhenium">75<br>Re</td>
+                <td id="Os" title="Osmium">76<br>Os</td>
+                <td id="Ir" title="Iridium">77<br>Ir</td>
+                <td id="Pt" title="Platium">78<br>Pt</td>
+                <td id="Au" title="Gold">79<br>Au</td>
+                <td id="Hg" title="Mercury">80<br>Hg</td>
+                <td id="Tl" title="Thallium">81<br>Tl</td>
+                <td id="Pb" title="Lead">82<br>Pb</td>
+                <td id="Bi" title="Bismuth">83<br>Bi</td>
+                <td id="Po" title="Polonium">84<br>Po</td>
+                <td id="At" title="Astatine">85<br>At</td>
+                <td id="Rn" title="Radon">86<br>Rn</td>
+            </tr>
+            <tr id="R7">
+                <td id="Fr" title="Francium">87<br>Fr</td>
+                <td id="Ra" title="Radium">88<br>Ra</td>
+                <td class="empty"><br></td>
+                <td id="Rf" title="Rutherfordium">104<br>Rf</td>
+                <td id="Db" title="Dubnium">105<br>Db</td>
+                <td id="Sg" title="Seaborgium">106<br>Sg</td>
+                <td id="Bh" title="Bohrium">107<br>Bh</td>
+                <td id="Hs" title="Hassium">108<br>Hs</td>
+                <td id="Mt" title="Meitnerium">109<br>Mt</td>
+                <td id="Ds" title="Darmstadtium">110<br>Ds</td>
+                <td id="Rg" title="Roentgenium">111<br>Rg</td>
+                <td id="Cn" title="Copernicium">112<br>Cn</td>
+                <td id="Nh" title="Nihonium">113<br>Nh</td>
+                <td id="Fl" title="Flerovium">114<br>Fl</td>
+                <td id="Mc" title="Moscovium">115<br>Mc</td>
+                <td id="Lv" title="Livermorium">116<br>Lv</td>
+                <td id="Ts" title="Tennessine">117<br>Ts</td>
+                <td id="Og" title="Oganesson">118<br>Og</td>
+            </tr>
+            <tr>
+                <td colspan="18"></td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td id="La" title="Lanthanum">57<br>La</td>
+                <td id="Ce" title="Cerium">58<br>Ce</td>
+                <td id="Pr" title="Praseodymium">59<br>Pr</td>
+                <td id="Nd" title="Neodymium">60<br>Nd</td>
+                <td id="Pm" title="Promethium">61<br>Pm</td>
+                <td id="Sm" title="Samarium">62<br>Sm</td>
+                <td id="Eu" title="Europium">63<br>Eu</td>
+                <td id="Gd" title="Gadolinium">64<br>Gd</td>
+                <td id="Tb" title="Terbium">65<br>Tb</td>
+                <td id="Dy" title="Dysprosium">66<br>Dy</td>
+                <td id="Ho" title="Holmium">67<br>Ho</td>
+                <td id="Er" title="Erbium">68<br>Er</td>
+                <td id="Tm" title="Thulium">69<br>Tm</td>
+                <td id="Yb" title="Ytterbium">70<br>Yb</td>
+                <td id="Lu" title="Lutetium">71<br>Lu</td>
+            </tr>
+            <tr>
+                <td colspan="2"></td>
+                <td id="Ac" title="Actinium">89<br>Ac</td>
+                <td id="Th" title="Thorium">90<br>Th</td>
+                <td id="Pa" title="Protactinium">91<br>Pa</td>
+                <td id="U" title="Uranium">92<br>U</td>
+                <td id="Np" title="Neptunium">93<br>Np</td>
+                <td id="Pu" title="Plutonium">94<br>Pu</td>
+                <td id="Am" title="Americium">95<br>Am</td>
+                <td id="Cm" title="Curium">96<br>Cm</td>
+                <td id="Bk" title="Berkelium">97<br>Bk</td>
+                <td id="Cf" title="Californium">98<br>Cf</td>
+                <td id="Es" title="Einsteinium">99<br>Es</td>
+                <td id="Fm" title="Fermium">100<br>Fm</td>
+                <td id="Md" title="Mendelevium">101<br>Md</td>
+                <td id="No" title="Nobelium">102<br>No</td>
+                <td id="Lr" title="Lawrencium">103<br>Lr</td>                
+            </tr>
+        </tbody>
+    </table>
+    </center>
+</body>
+</html>
